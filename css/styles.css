@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(51, 51, 51);
+}
+
+header {
+    background-color: rgb(2, 2, 2);
+}
+
+.pageTitle {
+    font-size: 50px;
+    color: brown;
+    text-transform: uppercase;
+    padding: 30px;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.squareCalculator {
+    background-color: rgb(89, 89, 248);
+    width: 70%;
+    height: 580px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+}
+
+.calcInput {
+    width: 80%;
+    height: 25%;
+    background-color: pink;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.keypad {
+    width: 80%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.button-group{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+.row0,.row1,.row2,.row3,.row4{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    .equal{
+        background-color: aqua;
+    }
+}
+
+.button-group button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    width: 100%;
+}
