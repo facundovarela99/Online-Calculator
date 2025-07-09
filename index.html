@@ -22,40 +22,46 @@
             <div class="keypad">
                 <div class="button-group">
                     <div class="row0">
-                        <button type="button" class="button" id="euler">e</button>
-                        <button type="button" class="button" id="pi">π</button>
-                        <button type="button" class="button" id="leftParenthesis">(</button>
-                        <button type="button" class="button" id="rightParenthesis">)</button>
+                        <button type="button" class="button" id="euler" onclick="addNumber(Math.E.toFixed(8))">e</button>
+                        <button type="button" class="button" id="pi" onclick="addNumber(Math.PI.toFixed(8))">π</button>
+                        <button type="button" class="button" id="leftParenthesis" onclick="addParenthesis('(')">(</button>
+                        <button type="button" class="button" id="rightParenthesis" onclick="addParenthesis(')')">)</button>
                         <button type="button" class="button" id="%">%</button>
-                        <button type="button" class="button" id="AC" onclick="clearInput()">AC</button>
+                        <button type="button" class="button" id="clearButton" onclick="handleClear()">AC</button>
                     </div>
                     <div class="row1">
-                        <button type="button" class="button" id="sin">sin</button>
-                        <button type="button" class="button" id="cos">cos</button>
+                        <button type="button" class="button" id="sin" onclick="applyFunction('sin')">sin</button>
+                        <button type="button" class="button" id="cos" onclick="applyFunction('cos')">cos</button>
                         <button type="button" class="button" id="7" onclick="addNumber('7')">7</button>
                         <button type="button" class="button" id="8" onclick="addNumber('8')">8</button>
                         <button type="button" class="button" id="9" onclick="addNumber('9')">9</button>
                         <button type="button" class="button" id="divide" onclick="addOperator('/')">/</button>
                     </div>
                     <div class="row2">
-                        <button type="button" class="button" id="In">In</button>
-                        <button type="button"class="button" id="Log">Log</button>
+                        <button type="button" class="button" id="In" onclick="applyFunction('ln')">In</button>
+                        <button type="button"class="button" id="Log" onclick="applyFunction('Log')">Log</button>
                         <button type="button" class="button" id="4" onclick="addNumber('4')">4</button>
                         <button type="button" class="button" id="5" onclick="addNumber('5')">5</button>
                         <button type="button" class="button" id="6" onclick="addNumber('6')">6</button>
                         <button type="button" class="button" id="multiply" onclick="addOperator('*')">x</button>
                     </div>
                     <div class="row3">
-                        <button type="button" class="button" id="tan">tan</button>
-                        <button type="button" class="button" id="squareRoot">√</button>
+                        <button type="button" class="button" id="tan" onclick="applyFunction('tan')">tan</button>
+                        <button type="button" class="button" id="squareRoot" onclick="applyFunction('sqrt')">√</button>
                         <button type="button" class="button" id="1" onclick="addNumber('1')">1</button>
                         <button type="button" class="button" id="2" onclick="addNumber('2')">2</button>
                         <button type="button" class="button" id="3" onclick="addNumber('3')">3</button>
                         <button type="button" class="button" id="subtract" onclick="addOperator('-')">-</button>
                     </div>
+                    <!-- 
+                    <button type="button" class="button" id="cos" onclick="applyFunction('cos')">cos</button>
+                    <button type="button" class="button" id="tan" onclick="applyFunction('tan')">tan</button>
+                    <button type="button" class="button" id="squareRoot" onclick="applyFunction('sqrt')">√</button>
+
+                    -->
                     <div class="row4">
-                        <button type="button" class="button" id="x!">x!</button>
-                        <button type="button" class="button" id="x^y">x^y</button>
+                        <button type="button" class="button" id="x!" onclick="applyFunction('factorial')">x!</button>
+                        <button type="button" class="button" id="x^y" onclick="addOperator('**')">x^y</button>
                         <button type="button" class="button" id="0" onclick="addNumber('0')">0</button>
                         <button type="button" class="button" id="comma" onclick="addDecimal()">.</button>
                         <button type="button" class="button" id="equal" onclick="calculateResult()">=</button>
