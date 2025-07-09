@@ -17,39 +17,49 @@
     <main>
         <section class="squareCalculator">
             <div class="calcInput">
-                THIS IS THE PLACE FOR THE INPUT
+                <input class="inputSquare" type="text" id="spaceInput">
             </div>
             <div class="keypad">
                 <div class="button-group">
                     <div class="row0">
-                        <button class="leftParenthesis" id="leftParenthesis">(</button>
-                        <button class="rightParenthesis" id="rightParenthesis">)</button>
-                        <button class="module" id="%">%</button>
-                        <button class="AllClear" id="AC">AC</button>
+                        <button type="button" class="button" id="euler">e</button>
+                        <button type="button" class="button" id="pi">π</button>
+                        <button type="button" class="button" id="leftParenthesis">(</button>
+                        <button type="button" class="button" id="rightParenthesis">)</button>
+                        <button type="button" class="button" id="%">%</button>
+                        <button type="button" class="button" id="AC" onclick="clearInput()">AC</button>
                     </div>
                     <div class="row1">
-                        <button id="7">7</button>
-                        <button id="8">8</button>
-                        <button id="9">9</button>
-                        <button class="division" id="/">/</button>
+                        <button type="button" class="button" id="sin">sin</button>
+                        <button type="button" class="button" id="cos">cos</button>
+                        <button type="button" class="button" id="7" onclick="addNumber('7')">7</button>
+                        <button type="button" class="button" id="8" onclick="addNumber('8')">8</button>
+                        <button type="button" class="button" id="9" onclick="addNumber('9')">9</button>
+                        <button type="button" class="button" id="divide" onclick="addOperator('/')">/</button>
                     </div>
                     <div class="row2">
-                        <button id="4">4</button>
-                        <button id="5">5</button>
-                        <button id="6">6</button>
-                        <button class="product" id="x">x</button>
+                        <button type="button" class="button" id="In">In</button>
+                        <button type="button"class="button" id="Log">Log</button>
+                        <button type="button" class="button" id="4" onclick="addNumber('4')">4</button>
+                        <button type="button" class="button" id="5" onclick="addNumber('5')">5</button>
+                        <button type="button" class="button" id="6" onclick="addNumber('6')">6</button>
+                        <button type="button" class="button" id="multiply" onclick="addOperator('*')">x</button>
                     </div>
                     <div class="row3">
-                        <button id="1">1</button>
-                        <button id="2">2</button>
-                        <button id="3">3</button>
-                        <button id="substraction">-</button>
+                        <button type="button" class="button" id="tan">tan</button>
+                        <button type="button" class="button" id="squareRoot">√</button>
+                        <button type="button" class="button" id="1" onclick="addNumber('1')">1</button>
+                        <button type="button" class="button" id="2" onclick="addNumber('2')">2</button>
+                        <button type="button" class="button" id="3" onclick="addNumber('3')">3</button>
+                        <button type="button" class="button" id="subtract" onclick="addOperator('-')">-</button>
                     </div>
                     <div class="row4">
-                        <button class="zero" id="0">0</button>
-                        <button class="comma" id=".">.</button>
-                        <button class="equal" id="=">=</button>
-                        <button class="plus" id="+">+</button>
+                        <button type="button" class="button" id="x!">x!</button>
+                        <button type="button" class="button" id="x^y">x^y</button>
+                        <button type="button" class="button" id="0" onclick="addNumber('0')">0</button>
+                        <button type="button" class="button" id="comma" onclick="addDecimal()">.</button>
+                        <button type="button" class="button" id="equal" onclick="calculateResult()">=</button>
+                        <button type="button" class="button" id="add" onclick="addOperator('+')">+</button>
                     </div>
                 </div>
             </div>
@@ -57,6 +67,7 @@
     </main>
 
     <footer></footer>
+    <script src="./js/script.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 
